@@ -1,145 +1,278 @@
----
----
 <!DOCTYPE html>
 <html lang="en-AU">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ site.data.site.seo.description }}">
+  <meta name="description"
+    content="Pratik Patel — Content writer for Australian businesses. SEO blogs, social media, landing pages and more. Get found, get clients.">
   <meta name="keywords" content="content writer, SEO writer, Australian businesses, copywriting, social media content">
-  <meta name="author" content="{{ site.data.site.brand.owner }}">
-  <meta property="og:title" content="{{ site.data.site.seo.title }}">
-  <meta property="og:description" content="{{ site.data.site.seo.description }}">
+  <meta name="author" content="Pratik Patel">
+  <meta property="og:title" content="Pratik Patel | Content Writer for Australian Businesses">
+  <meta property="og:description"
+    content="Pratik Patel — Content writer for Australian businesses. SEO blogs, social media, landing pages and more. Get found, get clients.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}/">
-  <meta property="og:image" content="{{ site.url }}{{ site.data.site.seo.og_image }}">
+  <meta property="og:url" content="https://bypratik.co.in/">
+  <meta property="og:image" content="https://bypratik.co.in/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ site.data.site.seo.title }}">
-  <meta name="twitter:description" content="{{ site.data.site.seo.description }}">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.data.site.seo.og_image }}">
-  <link rel="canonical" href="{{ site.url }}/">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="twitter:title" content="Pratik Patel | Content Writer for Australian Businesses">
+  <meta name="twitter:description"
+    content="Pratik Patel — Content writer for Australian businesses. SEO blogs, social media, landing pages and more. Get found, get clients.">
+  <meta name="twitter:image" content="https://bypratik.co.in/og-image.jpg">
+  <meta name="twitter:creator" content="@bypratik">
+  <link rel="canonical" href="https://bypratik.co.in/">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <meta name="theme-color" content="#1e40af">
-  <title>{{ site.data.site.seo.title }}</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>Pratik Patel | Content Writer for Australian Businesses</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pratik Patel",
+    "description": "Content writer for Australian businesses providing SEO blogs, social media content, landing pages and more",
+    "url": "https://bypratik.co.in/",
+    "image": "https://bypratik.co.in/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AU"
+    },
+    "areaServed": "AU",
+    "serviceType": "Content Writing, Copywriting, SEO Optimization",
+    "sameAs": [
+      "https://www.linkedin.com/in/bypratik",
+      "https://www.instagram.com/bypratik"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bypratik.co.in/"
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
+
   <nav>
-    <a href="/" class="nav-logo">{{ site.data.site.brand.name }}<span>{{ site.data.site.brand.dot }}</span></a>
+    <a href="index.html" class="nav-logo">Pratik<span>.</span></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/" class="active">Home</a></li>
-      <li><a href="/blogs.html">My Blogs</a></li>
-      <li><a href="/services.html">Services</a></li>
-      <li><a href="/about.html">About Me</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="blogs.html">My Blogs</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <!-- <li><a href="contact.html" class="nav-cta">Let's chat ↗</a></li> -->
     </ul>
-    <div class="nav-cta-wrap"><a href="{{ site.data.site.contact.cta_link }}" class="nav-cta">{{ site.data.site.contact.cta_label }}</a></div>
-    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-cta-wrap"><a href="contact.html" class="nav-cta">Let's chat ↗</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-eyebrow">{{ site.data.home.hero.eyebrow }}</div>
-    <h1>{{ site.data.home.hero.title }}</h1>
-    <p>{{ site.data.home.hero.description }}</p>
+    <div class="hero-eyebrow">Content writer for Australian businesses</div>
+    <h1>Words that <em>work</em> for your business</h1>
+    <p>I help Australian SMEs attract the right clients through SEO blogs, social content, landing pages and meme
+      marketing that actually converts.</p>
     <div class="btn-row">
-      <a href="{{ site.data.home.hero.primary_cta_link }}" class="btn-primary">{{ site.data.home.hero.primary_cta_label }}</a>
-      <a href="{{ site.data.home.hero.secondary_cta_link }}" class="btn-ghost">{{ site.data.home.hero.secondary_cta_label }}</a>
+      <a href="services.html" class="btn-primary">Explore my services →</a>
+      <a href="contact.html" class="btn-ghost">Get a free quote</a>
     </div>
     <div class="hero-trust">
-      {% for item in site.data.home.hero.trust_items %}
-      <span class="trust-item">{{ item }}</span>
-      {% endfor %}
+      <span class="trust-item">Working with Australian businesses</span>
+      <span class="trust-item">Available AEST hours</span>
+      <span class="trust-item">500+ articles delivered</span>
+      <span class="trust-item">Reply within 24 hours</span>
     </div>
   </section>
 
+  <!-- SERVICES SNAPSHOT -->
   <section>
-    <div class="section-label">{{ site.data.home.services.label }}</div>
-    <h2 class="section-title">{{ site.data.home.services.title }}</h2>
-    <p class="section-sub">{{ site.data.home.services.subtitle }}</p>
+    <div class="section-label">What I do</div>
+    <h2 class="section-title">Content services built for <em>Australian growth</em></h2>
+    <p class="section-sub">From daily social posts to AI-ready SEO content — everything your Australian audience needs
+      to trust and choose your business.</p>
     <div class="grid-3">
-      {% for card in site.data.home.services.cards %}
       <div class="card">
-        <div class="card-icon">{{ card.icon }}</div>
-        <h3>{{ card.title }}</h3>
-        <p>{{ card.description }}</p>
-        <a href="{{ card.link_url }}" class="card-link">{{ card.link_label }}</a>
+        <div class="card-icon">📱</div>
+        <h3>Social Media Content</h3>
+        <p>Done-for-you social content that sounds like you, posted on time, every time across LinkedIn, Instagram and
+          Facebook.</p>
+        <a href="social-media.html" class="card-link">Learn more →</a>
       </div>
-      {% endfor %}
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Landing Page Optimisation</h3>
+        <p>Your ads are working. Your landing page isn't. I write copy that turns clicks into paying Australian clients.
+        </p>
+        <a href="landing-page.html" class="card-link">Learn more →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">😂</div>
+        <h3>Meme Creation</h3>
+        <p>Scroll-stopping memes your audience actually shares. Great for finance, SaaS and real estate brands across
+          Australia.</p>
+        <a href="memes.html" class="card-link">Learn more →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>SEO / AEO / GEO Optimisation</h3>
+        <p>Get found on Google, ChatGPT and whatever comes next. I optimise for all three so your business stays ahead.
+        </p>
+        <a href="seo.html" class="card-link">Learn more →</a>
+      </div>
     </div>
   </section>
 
+  <!-- WHY AUSTRALIA -->
+  <section class="bg-sand">
+    <div class="section-label">Why Australian businesses trust me</div>
+    <h2 class="section-title">I write for your <em>audience</em>, not a generic one</h2>
+    <p class="section-sub">Australian readers are direct, sceptical of hype and loyal to brands that speak their
+      language. I know the difference.</p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">🇦🇺</div>
+        <h3>Australian English, always</h3>
+        <p>"Optimisation" not "optimization." "Colour" not "color." Every word signals you're local — and Australians
+          notice.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏙️</div>
+        <h3>City-specific context</h3>
+        <p>Melbourne, Sydney, Brisbane, Perth — I reference the right cities, seasons and cultural moments for your
+          audience.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⏰</div>
+        <h3>AEST availability</h3>
+        <p>I work Australian business hours. No delays, no time zone confusion — just fast, responsive communication.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
   <section>
-    <div class="section-label text-center" style="justify-content:center;">{{ site.data.home.process.label }}</div>
-    <h2 class="section-title text-center" style="text-align:center;">{{ site.data.home.process.title }}</h2>
-    <p class="section-sub text-center" style="text-align:center;margin-left:auto;margin-right:auto;">{{ site.data.home.process.subtitle }}</p>
-    <div class="steps" style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-top:16px;">
-      {% for step in site.data.home.process.steps %}
-      <div class="step{% unless forloop.last %} step-with-border{% endunless %}">
-        <div class="step-num">{{ step.number }}</div>
-        <h4>{{ step.title }}</h4>
-        <p>{{ step.description }}</p>
+    <div class="section-label text-center" style="justify-content:center;">How it works</div>
+    <h2 class="section-title text-center" style="text-align:center;">From brief to published <em>in 48 hours</em></h2>
+    <p class="section-sub text-center" style="text-align:center;margin-left:auto;margin-right:auto;">A simple, no-fuss
+      process designed for busy Australian business owners.</p>
+    <div class="steps"
+      style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-top:16px;">
+      <div class="step" style="border-right:0.5px solid var(--border);animation:slideInUp 0.8s ease-out 0.1s both;">
+        <div class="step-num">01</div>
+        <h4>You send a brief</h4>
+        <p>Tell me your business, audience and what you need. No long forms — just a quick chat works too.</p>
       </div>
-      {% endfor %}
+      <div class="step" style="border-right:0.5px solid var(--border);animation:slideInUp 0.8s ease-out 0.3s both;">
+        <div class="step-num">02</div>
+        <h4>I research and write</h4>
+        <p>I dig into your industry, competitors and keywords before writing a single word.</p>
+      </div>
+      <div class="step" style="border-right:0.5px solid var(--border);animation:slideInUp 0.8s ease-out 0.5s both;">
+        <div class="step-num">03</div>
+        <h4>You review</h4>
+        <p>I deliver a clean draft. Two rounds of revisions included — no extra charges.</p>
+      </div>
+      <div class="step" style="animation:slideInUp 0.8s ease-out 0.7s both;">
+        <div class="step-num">04</div>
+        <h4>Publish and grow</h4>
+        <p>Your content goes live. I track performance and we optimise from there.</p>
+      </div>
     </div>
   </section>
 
+  <!-- TESTIMONIAL -->
   <section class="bg-sand">
     <div class="grid-2" style="align-items:center;">
       <div>
-        <div class="section-label">{{ site.data.home.testimonials.label }}</div>
-        <h2 class="section-title">{{ site.data.home.testimonials.title }}</h2>
-        <p style="color:var(--bark);font-size:15px;line-height:1.8;margin-bottom:32px;">{{ site.data.home.testimonials.subtitle }}</p>
-        <a href="{{ site.data.home.testimonials.cta_link }}" class="btn-primary">{{ site.data.home.testimonials.cta_label }}</a>
+        <div class="section-label">What clients say</div>
+        <h2 class="section-title">Real results for <em>real businesses</em></h2>
+        <p style="color:var(--bark);font-size:15px;line-height:1.8;margin-bottom:32px;">Australian business owners
+          who've worked with me on content that actually moved the needle.</p>
+        <a href="contact.html" class="btn-primary">Start working together →</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;">
-        {% for item in site.data.home.testimonials.items %}
-        <div class="card">
-          <blockquote style="font-family:var(--serif);font-size:17px;font-style:italic;color:var(--charcoal);line-height:1.5;margin-bottom:14px;">"{{ item.quote }}"</blockquote>
-          <div style="font-size:14px;font-weight:600;">{{ item.name }}</div>
-          <div style="font-size:13px;color:var(--muted);">{{ item.role }}</div>
+        <div class="testimonial-block">
+          <blockquote>"Pratik understood our tone immediately. Our blog traffic doubled in 3 months and we're ranking on
+            page one for our target keywords."</blockquote>
+          <div class="testimonial-name">Sarah M.</div>
+          <div class="testimonial-author">Marketing Manager · Melbourne</div>
         </div>
-        {% endfor %}
+        <div class="card">
+          <blockquote
+            style="font-family:var(--serif);font-size:17px;font-style:italic;color:var(--charcoal);line-height:1.5;margin-bottom:14px;">
+            "Our landing page conversion rate went from 1.8% to 4.3% after Pratik rewrote the copy. Worth every cent."
+          </blockquote>
+          <div style="font-size:14px;font-weight:600;">James T.</div>
+          <div style="font-size:13px;color:var(--muted);">Founder · SaaS startup · Sydney</div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA BANNER -->
   <section style="background:var(--primary);padding:70px 5%;text-align:center;">
-    <div class="ochre-tag" style="color:rgba(245,242,237,0.8);">{{ site.data.home.cta_banner.eyebrow }}</div>
-    <h2 style="font-family:var(--serif);font-size:clamp(28px,4vw,42px);color:var(--sand);margin:16px 0 12px;">{{ site.data.home.cta_banner.title }}</h2>
-    <p style="font-size:16px;color:rgba(245,242,237,0.75);max-width:480px;margin:0 auto 36px;line-height:1.75;">{{ site.data.home.cta_banner.subtitle }}</p>
-    <a href="{{ site.data.home.cta_banner.button_link }}" class="btn-primary" style="background:var(--sand);color:var(--primary);">{{ site.data.home.cta_banner.button_label }}</a>
+    <div class="ochre-tag" style="color:rgba(245,242,237,0.8);">Ready to grow?</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(28px,4vw,42px);color:var(--sand);margin:16px 0 12px;">Let's have
+      a chat about your content</h2>
+    <p style="font-size:16px;color:rgba(245,242,237,0.75);max-width:480px;margin:0 auto 36px;line-height:1.75;">No sales
+      pitch. Just a straightforward conversation about what you need and how I can help.</p>
+    <a href="contact.html" class="btn-primary" style="background:var(--sand);color:var(--primary);">Get a free quote
+      today
+      →</a>
   </section>
 
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="nav-logo">{{ site.data.site.brand.name }}<span style="color:var(--ochre);">{{ site.data.site.brand.dot }}</span></a>
-        <p>{{ site.data.site.brand.tagline }}</p>
+        <a href="index.html" class="nav-logo">Pratik<span style="color:var(--ochre);">.</span></a>
+        <p>Content writer for Australian businesses. Helping SMEs grow through smart, strategic content that converts.
+        </p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="/social-media.html">Social Media Content</a></li>
-          <li><a href="/landing-page.html">Landing Page Optimisation</a></li>
-          <li><a href="/memes.html">Meme Creation</a></li>
-          <li><a href="/seo.html">SEO / AEO / GEO</a></li>
+          <li><a href="social-media.html">Social Media Content</a></li>
+          <li><a href="landing-page.html">Landing Page Optimisation</a></li>
+          <li><a href="memes.html">Meme Creation</a></li>
+          <li><a href="seo.html">SEO / AEO / GEO</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Navigate</h4>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/blogs.html">My Blogs</a></li>
-          <li><a href="/about.html">About Me</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blogs.html">My Blogs</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; {{ site.data.site.footer.copyright }}</span>
-      <span>{{ site.data.site.footer.note }}</span>
+      <span>© 2025 Pratik Patel. All rights reserved.</span>
+      <span>Available AEST · <a href="contact.html">bypratik.co.in</a></span>
     </div>
   </footer>
 
-  <script src="/main.js"></script>
-</body>
+
+
 </html>
