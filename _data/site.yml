@@ -1,0 +1,20 @@
+brand:
+  name: "Pratik"
+  dot: "."
+  owner: "Pratik Patel"
+  tagline: "Content writer for Australian businesses. Helping SMEs grow through smart, strategic content that converts."
+
+seo:
+  title: "Pratik Patel | Content Writer for Australian Businesses"
+  description: "Pratik Patel is a content writer for Australian businesses. SEO blogs, social media, landing pages and conversion-focused writing."
+  og_image: "/og-image.jpg"
+
+contact:
+  cta_label: "Let's chat ->"
+  cta_link: "/contact.html"
+  email: "hello@bypratik.co.in"
+  location: "Available AEST hours"
+
+footer:
+  copyright: "2026 Pratik Patel. All rights reserved."
+  note: "Available AEST | bypratik.co.in"

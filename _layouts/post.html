@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.excerpt_text | default: page.excerpt | strip_html | truncate: 160 }}">
+  <meta name="author" content="{{ site.data.site.brand.owner }}">
+  <meta property="og:title" content="{{ page.title }} | {{ site.data.site.brand.owner }}">
+  <meta property="og:description" content="{{ page.excerpt_text | default: page.excerpt | strip_html | truncate: 160 }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.data.site.seo.og_image }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#1e40af">
+  <title>{{ page.title }} | {{ site.data.site.brand.owner }}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">{{ site.data.site.brand.name }}<span>{{ site.data.site.brand.dot }}</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/blogs.html" class="active">My Blogs</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about.html">About Me</a></li>
+      <li><a href="/contact.html" class="nav-cta">{{ site.data.site.contact.cta_label }}</a></li>
+    </ul>
+    <div class="nav-cta-wrap"><a href="{{ site.data.site.contact.cta_link }}" class="nav-cta">{{ site.data.site.contact.cta_label }}</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="service-hero post-hero">
+    <div class="breadcrumb"><a href="/">Home</a> -> <a href="/blogs.html">My Blogs</a> -> {{ page.title }}</div>
+    <div class="section-label">{{ page.categories | join: " | " }}</div>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.excerpt_text }}</p>
+    <div class="blog-meta">
+      <span>{{ page.date | date: "%d %b %Y" }}</span>
+      <span>{{ page.read_time | default: "5 min read" }}</span>
+    </div>
+  </section>
+
+  <section>
+    <article class="post-body">
+      {{ content }}
+    </article>
+  </section>
+
+  <section class="bg-sand" style="text-align:center;">
+    <h2 class="section-title">Need help with content for your business?</h2>
+    <p class="section-sub" style="margin:0 auto 24px;">Let's create content that ranks, converts, and sounds like your brand.</p>
+    <a href="{{ site.data.site.contact.cta_link }}" class="btn-primary">{{ site.data.site.contact.cta_label }}</a>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">{{ site.data.site.brand.name }}<span style="color:var(--ochre);">{{ site.data.site.brand.dot }}</span></a>
+        <p>{{ site.data.site.brand.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blogs.html">My Blogs</a></li>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ site.data.site.footer.copyright }}</span>
+      <span>{{ site.data.site.footer.note }}</span>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>

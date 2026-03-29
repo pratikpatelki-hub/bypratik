@@ -1,0 +1,145 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ site.data.site.seo.description }}">
+  <meta name="keywords" content="content writer, SEO writer, Australian businesses, copywriting, social media content">
+  <meta name="author" content="{{ site.data.site.brand.owner }}">
+  <meta property="og:title" content="{{ site.data.site.seo.title }}">
+  <meta property="og:description" content="{{ site.data.site.seo.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:image" content="{{ site.url }}{{ site.data.site.seo.og_image }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ site.data.site.seo.title }}">
+  <meta name="twitter:description" content="{{ site.data.site.seo.description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.data.site.seo.og_image }}">
+  <link rel="canonical" href="{{ site.url }}/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="theme-color" content="#1e40af">
+  <title>{{ site.data.site.seo.title }}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">{{ site.data.site.brand.name }}<span>{{ site.data.site.brand.dot }}</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/blogs.html">My Blogs</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/about.html">About Me</a></li>
+    </ul>
+    <div class="nav-cta-wrap"><a href="{{ site.data.site.contact.cta_link }}" class="nav-cta">{{ site.data.site.contact.cta_label }}</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-eyebrow">{{ site.data.home.hero.eyebrow }}</div>
+    <h1>{{ site.data.home.hero.title }}</h1>
+    <p>{{ site.data.home.hero.description }}</p>
+    <div class="btn-row">
+      <a href="{{ site.data.home.hero.primary_cta_link }}" class="btn-primary">{{ site.data.home.hero.primary_cta_label }}</a>
+      <a href="{{ site.data.home.hero.secondary_cta_link }}" class="btn-ghost">{{ site.data.home.hero.secondary_cta_label }}</a>
+    </div>
+    <div class="hero-trust">
+      {% for item in site.data.home.hero.trust_items %}
+      <span class="trust-item">{{ item }}</span>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">{{ site.data.home.services.label }}</div>
+    <h2 class="section-title">{{ site.data.home.services.title }}</h2>
+    <p class="section-sub">{{ site.data.home.services.subtitle }}</p>
+    <div class="grid-3">
+      {% for card in site.data.home.services.cards %}
+      <div class="card">
+        <div class="card-icon">{{ card.icon }}</div>
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
+        <a href="{{ card.link_url }}" class="card-link">{{ card.link_label }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label text-center" style="justify-content:center;">{{ site.data.home.process.label }}</div>
+    <h2 class="section-title text-center" style="text-align:center;">{{ site.data.home.process.title }}</h2>
+    <p class="section-sub text-center" style="text-align:center;margin-left:auto;margin-right:auto;">{{ site.data.home.process.subtitle }}</p>
+    <div class="steps" style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-top:16px;">
+      {% for step in site.data.home.process.steps %}
+      <div class="step{% unless forloop.last %} step-with-border{% endunless %}">
+        <div class="step-num">{{ step.number }}</div>
+        <h4>{{ step.title }}</h4>
+        <p>{{ step.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="bg-sand">
+    <div class="grid-2" style="align-items:center;">
+      <div>
+        <div class="section-label">{{ site.data.home.testimonials.label }}</div>
+        <h2 class="section-title">{{ site.data.home.testimonials.title }}</h2>
+        <p style="color:var(--bark);font-size:15px;line-height:1.8;margin-bottom:32px;">{{ site.data.home.testimonials.subtitle }}</p>
+        <a href="{{ site.data.home.testimonials.cta_link }}" class="btn-primary">{{ site.data.home.testimonials.cta_label }}</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        {% for item in site.data.home.testimonials.items %}
+        <div class="card">
+          <blockquote style="font-family:var(--serif);font-size:17px;font-style:italic;color:var(--charcoal);line-height:1.5;margin-bottom:14px;">"{{ item.quote }}"</blockquote>
+          <div style="font-size:14px;font-weight:600;">{{ item.name }}</div>
+          <div style="font-size:13px;color:var(--muted);">{{ item.role }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--primary);padding:70px 5%;text-align:center;">
+    <div class="ochre-tag" style="color:rgba(245,242,237,0.8);">{{ site.data.home.cta_banner.eyebrow }}</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(28px,4vw,42px);color:var(--sand);margin:16px 0 12px;">{{ site.data.home.cta_banner.title }}</h2>
+    <p style="font-size:16px;color:rgba(245,242,237,0.75);max-width:480px;margin:0 auto 36px;line-height:1.75;">{{ site.data.home.cta_banner.subtitle }}</p>
+    <a href="{{ site.data.home.cta_banner.button_link }}" class="btn-primary" style="background:var(--sand);color:var(--primary);">{{ site.data.home.cta_banner.button_label }}</a>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo">{{ site.data.site.brand.name }}<span style="color:var(--ochre);">{{ site.data.site.brand.dot }}</span></a>
+        <p>{{ site.data.site.brand.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/social-media.html">Social Media Content</a></li>
+          <li><a href="/landing-page.html">Landing Page Optimisation</a></li>
+          <li><a href="/memes.html">Meme Creation</a></li>
+          <li><a href="/seo.html">SEO / AEO / GEO</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/blogs.html">My Blogs</a></li>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ site.data.site.footer.copyright }}</span>
+      <span>{{ site.data.site.footer.note }}</span>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>

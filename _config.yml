@@ -1,0 +1,13 @@
+title: Pratik Patel
+description: Content writer for Australian businesses.
+url: "https://bypratik.co.in"
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:title/
+timezone: Asia/Kolkata
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

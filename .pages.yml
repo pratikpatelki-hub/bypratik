@@ -1,0 +1,204 @@
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  path: assets/uploads
+
+content:
+  - name: posts
+    label: Blog Posts
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, categories, read_time]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: text
+        required: true
+      - name: date
+        label: Publish Date
+        type: date
+        required: true
+      - name: categories
+        label: Categories
+        type: select
+        list: true
+        options:
+          values: [SEO, Social Media, Conversion, Australia]
+      - name: cover_icon
+        label: Card Label
+        type: string
+        description: "Small label shown on the blog card."
+      - name: read_time
+        label: Read Time
+        type: string
+        default: "5 min read"
+      - name: excerpt_text
+        label: Excerpt
+        type: text
+        required: true
+      - name: body
+        label: Blog Content
+        type: rich-text
+
+  - name: home_page
+    label: Landing Page Content
+    type: file
+    path: _data/home.yml
+    format: yaml
+    fields:
+      - name: hero
+        label: Hero Section
+        type: object
+        fields:
+          - name: eyebrow
+            type: string
+          - name: title
+            type: text
+          - name: description
+            type: text
+          - name: primary_cta_label
+            type: string
+          - name: primary_cta_link
+            type: string
+          - name: secondary_cta_label
+            type: string
+          - name: secondary_cta_link
+            type: string
+          - name: trust_items
+            label: Trust Items
+            type: string
+            list: true
+      - name: services
+        label: Services Section
+        type: object
+        fields:
+          - name: label
+            type: string
+          - name: title
+            type: text
+          - name: subtitle
+            type: text
+          - name: cards
+            type: object
+            list: true
+            fields:
+              - name: icon
+                type: string
+              - name: title
+                type: text
+              - name: description
+                type: text
+              - name: link_label
+                type: string
+              - name: link_url
+                type: string
+      - name: process
+        label: Process Section
+        type: object
+        fields:
+          - name: label
+            type: string
+          - name: title
+            type: text
+          - name: subtitle
+            type: text
+          - name: steps
+            type: object
+            list: true
+            fields:
+              - name: number
+                type: string
+              - name: title
+                type: text
+              - name: description
+                type: text
+      - name: testimonials
+        label: Testimonials
+        type: object
+        fields:
+          - name: label
+            type: string
+          - name: title
+            type: text
+          - name: subtitle
+            type: text
+          - name: cta_label
+            type: string
+          - name: cta_link
+            type: string
+          - name: items
+            type: object
+            list: true
+            fields:
+              - name: quote
+                type: text
+              - name: name
+                type: string
+              - name: role
+                type: string
+      - name: cta_banner
+        label: Bottom Banner
+        type: object
+        fields:
+          - name: eyebrow
+            type: string
+          - name: title
+            type: text
+          - name: subtitle
+            type: text
+          - name: button_label
+            type: string
+          - name: button_link
+            type: string
+
+  - name: global_site
+    label: Global Site Settings
+    type: file
+    path: _data/site.yml
+    format: yaml
+    fields:
+      - name: brand
+        type: object
+        fields:
+          - name: name
+            type: string
+          - name: dot
+            type: string
+          - name: owner
+            type: string
+          - name: tagline
+            type: text
+      - name: seo
+        type: object
+        fields:
+          - name: title
+            type: text
+          - name: description
+            type: text
+          - name: og_image
+            type: string
+      - name: contact
+        type: object
+        fields:
+          - name: cta_label
+            type: string
+          - name: cta_link
+            type: string
+          - name: email
+            type: string
+          - name: location
+            type: string
+      - name: footer
+        type: object
+        fields:
+          - name: copyright
+            type: string
+          - name: note
+            type: string
